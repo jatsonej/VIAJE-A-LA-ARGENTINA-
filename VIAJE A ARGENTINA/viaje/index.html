@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="es"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#0B2A5B">
+<meta name="mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="Buenos Aires 2026">
+<title>Buenos Aires 2026</title>
+<style>
+:root{--n:#0B2A5B;--n2:#14407F;--c:#8FD3F4;--c2:#EAF6FD;--l:#CFE9F8;--o:#FFC93C;--ok:#1F9D55;--wa:#B45309;--r:22px;--sh:0 4px 16px rgba(11,42,91,.13)}
+*{box-sizing:border-box;margin:0}
+html{-webkit-text-size-adjust:100%}
+body{font:19px/1.45 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;color:var(--n);background:var(--c2);padding:0 env(safe-area-inset-right) calc(92px + env(safe-area-inset-bottom)) env(safe-area-inset-left);overflow-x:hidden}
+img{max-width:100%;display:block}
+img.broken{visibility:hidden}
+:focus-visible{outline:4px solid var(--o);outline-offset:2px}
+button,.btn{font:inherit;font-weight:700;cursor:pointer;border:0;border-radius:18px;text-decoration:none;display:flex;align-items:center;justify-content:center;gap:8px;min-height:58px;padding:12px 16px;text-align:center;-webkit-tap-highlight-color:transparent}
+button:active,.btn:active{transform:scale(.98)}
+.s{display:none;max-width:560px;margin:auto;min-height:100vh}.s.on{display:block}
+.pad2{padding:14px}
+.bar{position:sticky;top:0;z-index:30;background:var(--n);color:#fff;display:flex;align-items:center;gap:12px;padding:10px 12px;padding-top:calc(10px + env(safe-area-inset-top))}
+.bar h2{font-size:1.35rem;line-height:1.15}
+.bar .bk{background:rgba(255,255,255,.18);color:#fff;min-height:50px;padding:0 14px;border-radius:14px;font-weight:700;display:flex;align-items:center;text-decoration:none;flex:none}
+.hero{position:relative;color:#fff;background:var(--n);border-radius:0 0 34px 34px;overflow:hidden;min-height:350px;display:flex;flex-direction:column;justify-content:flex-end}
+.hero>img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 40%}
+.hero::after{content:'';position:absolute;inset:0;background:linear-gradient(0deg,rgba(11,42,91,.93) 0%,rgba(11,42,91,.1) 70%)}
+.hero .in{position:relative;z-index:2;padding:20px 18px 66px}
+.hero h1{font-size:clamp(2rem,10vw,2.8rem);line-height:1.05;margin-bottom:10px}
+.chip{display:inline-block;background:var(--c);color:var(--n);font-weight:700;border-radius:30px;padding:6px 14px;margin:0 8px 6px 0;font-size:1.05rem}.chip.o{background:var(--o)}
+.fam{display:flex;justify-content:center;gap:14px;margin:-52px 14px 20px;position:relative;z-index:3}
+.fam div{width:76px;text-align:center;font-weight:700;font-size:1rem}
+.fam img{width:76px;height:76px;object-fit:cover;object-position:50% 30%;border-radius:50%;border:4px solid #fff;box-shadow:var(--sh);margin-bottom:4px;background:var(--l)}
+.menu{display:grid;gap:12px;padding:0 14px}
+.mb{background:#fff;color:var(--n);justify-content:flex-start;text-align:left;gap:14px;min-height:78px;padding:10px 16px;box-shadow:var(--sh);font-size:1.12rem;border-radius:22px}
+.mb .ic{width:54px;height:54px;border-radius:16px;background:var(--c2);display:flex;align-items:center;justify-content:center;font-size:1.8rem;flex:none}
+.mb .tx{flex:1;line-height:1.2}.mb::after{content:'›';font-size:2.2rem;color:var(--n2);line-height:1}
+.card{background:#fff;border-radius:var(--r);box-shadow:var(--sh);margin-bottom:16px;overflow:hidden}
+.pad{padding:16px}
+.big{background:var(--n);color:#fff;font-size:1.12rem;width:100%}.big.l{background:var(--l);color:var(--n)}.big.ok{background:var(--ok)}
+.key{background:var(--o);padding:12px 14px;border-radius:16px;font-weight:700;margin:10px 0}
+.tag{display:inline-block;color:#fff;background:var(--dc);border-radius:20px;padding:3px 14px;font-weight:700;font-size:1rem}
+.dc{background:#fff;border-radius:24px;box-shadow:var(--sh);margin-bottom:18px;overflow:hidden}
+.dh{position:relative;height:180px;color:#fff;display:flex;flex-direction:column;justify-content:flex-end;align-items:flex-start;padding:14px;background:var(--dc)}
+.dh img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.dh::after{content:'';position:absolute;inset:0;background:linear-gradient(0deg,rgba(0,0,0,.68),rgba(0,0,0,0) 65%)}
+.dh>*:not(img){position:relative;z-index:2}.dh h3{font-size:1.5rem;line-height:1.15;margin-top:6px}
+.row{display:flex;align-items:center;gap:12px;padding:10px 14px;border-top:1px solid var(--c2);color:var(--n);text-decoration:none;min-height:80px;font-weight:700;font-size:1.12rem}
+.row img{width:62px;height:62px;border-radius:16px;object-fit:cover;flex:none;background:var(--l)}
+.row .nm{flex:1;line-height:1.2}.row::after{content:'›';font-size:2.2rem;color:var(--n2);line-height:1}
+.vt{color:var(--ok);font-weight:800;font-size:1.3rem}.vt:empty{display:none}
+.nt{padding:0 14px 8px;margin:0}
+.lg{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.lt{position:relative;aspect-ratio:1;border-radius:22px;overflow:hidden;display:flex;align-items:flex-end;text-decoration:none;color:#fff;background:var(--n2);box-shadow:var(--sh)}
+.lt img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.lt::after{content:'';position:absolute;inset:0;background:linear-gradient(0deg,rgba(0,0,0,.72),rgba(0,0,0,0) 60%)}
+.lt b{position:relative;z-index:2;padding:10px;font-size:1.05rem;line-height:1.15}
+.lt .vt{position:absolute;top:8px;right:8px;background:#fff;border-radius:20px;padding:0 8px;z-index:3}
+.pbig{width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:24px;background:var(--l);box-shadow:var(--sh)}
+.vb{background:var(--l);color:var(--n)}.vb.on{background:var(--ok);color:#fff}
+.mt{margin-top:12px}
+details{margin-top:6px}
+summary{cursor:pointer;color:var(--n2);font-weight:700;padding:10px 0;min-height:54px;display:flex;align-items:center}
+textarea,input,select{font:inherit;width:100%;padding:14px;border:2px solid var(--c);border-radius:14px;color:var(--n);background:#fff;min-width:0;min-height:58px}
+textarea{min-height:90px}
+small.k{display:block;color:var(--n2);font-weight:700;margin:8px 0 2px}
+.seg{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-bottom:6px}
+.seg button{background:#fff;color:var(--n);box-shadow:var(--sh);min-height:66px;font-size:.98rem;line-height:1.15;padding:8px 4px}.seg button.on{background:var(--n);color:#fff}
+.sec{font-size:1.25rem;font-weight:800;margin:16px 0 10px;line-height:1.2}
+.hr{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:10px 0}
+.hr div{background:var(--c2);border-radius:14px;padding:10px}
+.hr small{display:block;color:var(--n2);font-weight:700}.hr b{font-size:1.5rem;display:block;line-height:1.2}.hr span{font-size:.95rem}
+.pas{display:flex;align-items:center;gap:12px;padding:8px 0;border-top:1px solid var(--c2)}
+.pas img{width:56px;height:56px;border-radius:50%;object-fit:cover;object-position:50% 30%;flex:none;background:var(--l)}
+.pas div{flex:1;min-width:0}.pas small{display:block;color:var(--n2)}
+.cod{font-weight:800;letter-spacing:1px;font-size:1.2rem}.cod.p{color:var(--wa);letter-spacing:0;font-size:.9rem;text-align:right;max-width:130px}
+.code{background:var(--c2);border-radius:14px;padding:10px;text-align:center;margin-top:8px}.code small{display:block;color:var(--n2);font-weight:700}.code b{font-size:2rem;letter-spacing:3px}
+.code.pend{background:#FFE8C2;color:var(--wa);font-weight:800}
+.tots{display:grid;gap:10px;margin-bottom:16px}
+.tot{background:var(--n);color:#fff;border-radius:var(--r);padding:14px 18px;display:flex;justify-content:space-between;align-items:center;gap:8px}
+.tot small{font-weight:700;font-size:1rem}.tot .n{font-size:1.8rem;font-weight:800;color:var(--c)}
+.gi{display:flex;justify-content:space-between;align-items:center;gap:8px;padding:12px 0;border-bottom:1px solid var(--c2)}.gi small{color:var(--n2);font-size:.95rem}
+.gi .a{display:flex;gap:6px;flex:none}.gi button{min-height:54px;min-width:54px;padding:6px 12px;font-size:1.1rem;background:var(--l);color:var(--n)}.gi button.x{background:#fde2e2;color:#a11}.gi button.si{background:#a11;color:#fff;font-size:1rem}
+.two{display:grid;grid-template-columns:1.2fr 1fr;gap:10px;margin-top:10px}
+.err{color:#a11;font-weight:700;margin-top:8px}
+.mini{color:var(--n2);font-size:1rem;margin:8px 0}
+.ia{margin:0 0 14px}.ia summary{padding:18px 16px;list-style:none;font-size:1.25rem;color:var(--n);justify-content:space-between;gap:8px;min-height:70px}
+.ia summary::-webkit-details-marker{display:none}.ia summary::after{content:'▾';color:var(--n2);font-size:1.4rem}.ia[open] summary::after{content:'▴'}
+.ia .pad{border-top:1px solid var(--c2)}
+.ck{display:flex;align-items:center;gap:14px;padding:10px 0;font-weight:600;cursor:pointer}
+.ck input{width:32px;height:32px;min-height:0;padding:0;flex:none;accent-color:var(--ok)}
+.ll{display:flex;gap:10px;margin-top:10px}.ll .btn{flex:1}
+ul.tips{padding-left:22px}ul.tips li{margin:8px 0}
+#vw{display:none;position:fixed;inset:0;z-index:90;background:rgba(5,20,45,.97);flex-direction:column;align-items:center;gap:10px;padding:12px;padding-top:calc(12px + env(safe-area-inset-top));padding-bottom:calc(12px + env(safe-area-inset-bottom))}
+#vw.on{display:flex}
+#vw .t2{display:flex;width:100%;max-width:520px;justify-content:space-between;align-items:center;color:#fff;gap:10px}
+#vw .t2 button{background:#fff;color:var(--n);min-height:52px}
+#vw img{flex:1;min-height:0;max-width:100%;object-fit:contain}
+#vw .btn{max-width:520px}
+#saved{position:fixed;bottom:calc(100px + env(safe-area-inset-bottom));left:50%;transform:translateX(-50%);background:var(--ok);color:#fff;padding:8px 20px;border-radius:30px;font-weight:700;opacity:0;transition:.3s;pointer-events:none;z-index:60}#saved.on{opacity:1}
+nav.bn{position:fixed;bottom:0;left:50%;transform:translateX(-50%);width:100%;max-width:560px;background:#fff;display:flex;padding:6px 4px calc(6px + env(safe-area-inset-bottom));box-shadow:0 -4px 16px rgba(11,42,91,.15);border-radius:24px 24px 0 0;z-index:40}
+nav.bn a{flex:1;min-width:0;text-align:center;font-size:.72rem;font-weight:700;color:var(--n);text-decoration:none;padding:4px 0;border-radius:16px;min-height:60px;overflow:hidden}
+nav.bn a span{display:block;font-size:1.65rem;line-height:1.25}nav.bn a.on{background:var(--l)}
+@media(min-width:600px){body{background:#BFD9EC}.s{background:var(--c2);box-shadow:0 0 40px rgba(11,42,91,.18)}}
+</style></head><body>
+
+<!-- INICIO -->
+<section class="s on" id="inicio">
+ <div class="hero"><img src="img/lugares/portada.jpg" alt="Buenos Aires"><div class="in"><h1>BUENOS AIRES 2026 🇦🇷</h1><div><span class="chip">📅 12 al 16 de noviembre</span><span class="chip o" id="cd"></span></div></div></div>
+ <div class="fam">
+  <div><img src="img/familia/mama.jpg" alt="Mamá">Mamá</div><div><img src="img/familia/papa.jpg" alt="Papá">Papá</div>
+  <div><img src="img/familia/raul.jpg" alt="Raúl">Raúl</div><div><img src="img/familia/mathias.jpg" alt="Mathias">Mathias</div></div>
+ <div class="menu" id="menu"></div>
+</section>
+
+<!-- ITINERARIO -->
+<section class="s" id="dias"><header class="bar"><a class="bk" href="#inicio">⬅ Inicio</a><h2>Nuestro itinerario</h2></header>
+ <div class="pad2"><p class="mini" style="margin-top:0">Toca un lugar para ver la foto y el mapa.</p><div id="listaDias"></div></div></section>
+
+<!-- VUELOS -->
+<section class="s" id="vuelos"><header class="bar"><a class="bk" href="#inicio">⬅ Inicio</a><h2>Nuestros vuelos</h2></header>
+ <div class="pad2"><div class="seg" id="seg"></div><div id="listaV"></div></div></section>
+
+<!-- ALOJAMIENTO -->
+<section class="s" id="alojo"><header class="bar"><a class="bk" href="#inicio">⬅ Inicio</a><h2>Nuestro alojamiento</h2></header>
+ <div class="pad2"><div class="card"><img src="img/alojamiento/1.jpg" alt="Edificio del Airbnb" style="width:100%;aspect-ratio:4/3;object-fit:cover;object-position:50% 35%;background:var(--l)">
+ <div class="pad"><h3 style="font-size:1.45rem">Airbnb Buenos Aires</h3>
+  <div class="key">🔑 Entrega de llaves: jueves 12 de noviembre, 8:30 a. m.<br>⏰ Debemos llegar a las 8:30 a. m.</div>
+  <p><b>Dirección:</b><br>Rodríguez Peña 140, Buenos Aires, Buenos Aires C1020, Argentina</p>
+  <a class="btn big mt" target="_blank" rel="noopener" href="https://goo.gl/maps/SQQerQRgd6UhK2sK6?g_st=aw">📍 ABRIR UBICACIÓN EN GOOGLE MAPS</a>
+  <details open><summary>💰 Costo del alojamiento</summary><div class="two" style="margin-top:0"><div><small class="k">Soles (S/)</small><input id="cS" inputmode="decimal"></div><div><small class="k">Dólares (US$)</small><input id="cU" inputmode="decimal" placeholder="opcional"></div></div>
+  <button class="big l mt" onclick="addAir()">➕ Incluir en los gastos</button><div id="airMsg"></div></details>
+  <details open><summary>📝 Notas</summary><textarea data-k="notaAlojo" placeholder="Escribe aquí..."></textarea></details></div></div></div></section>
+
+<!-- GASTOS -->
+<section class="s" id="gastos"><header class="bar"><a class="bk" href="#inicio">⬅ Inicio</a><h2>Nuestros gastos</h2></header>
+ <div class="pad2"><p class="mini" style="margin-top:0">Cada moneda se muestra por separado. Lo que escribes se guarda solo en este celular.</p>
+ <div class="tots" id="totales"></div>
+ <div class="card pad"><b id="ft">Anotar un gasto nuevo</b>
+  <small class="k">¿Qué tipo de gasto es?</small><select id="cat"></select>
+  <small class="k">Detalle (opcional)</small><input id="nota" placeholder="Ejemplo: almuerzo">
+  <div class="two"><div><small class="k">Importe</small><input id="monto" type="number" inputmode="decimal" placeholder="0.00"></div><div><small class="k">Moneda</small><select id="mon"><option value="S/">Soles (S/)</option><option value="US$">Dólares (US$)</option><option value="$ argentinos">Pesos argentinos</option><option value="Por confirmar">Por confirmar</option></select></div></div>
+  <div class="err" id="err"></div>
+  <button class="big ok mt" id="bg" onclick="addG()">➕ GUARDAR</button><button class="big l mt" id="bc" onclick="cancelE()" style="display:none">Cancelar</button></div>
+ <div class="card pad"><b>📋 Lo que hemos gastado</b><div id="histG"></div></div></div></section>
+
+<!-- LUGARES -->
+<section class="s" id="lugares"><header class="bar"><a class="bk" href="#inicio">⬅ Inicio</a><h2>Lugares que visitaremos</h2></header>
+ <div class="pad2"><p class="mini" style="margin-top:0">Toca una foto para ver el lugar.</p><div class="lg" id="lg"></div></div></section>
+
+<!-- DETALLE DE UN LUGAR -->
+<section class="s" id="lugar"></section>
+
+<!-- TARJETA DE EMBARQUE (pantalla completa) -->
+<div id="vw"><div class="t2"><b id="vwt" style="font-size:1.3rem"></b><button onclick="closeVw()">✕ CERRAR</button></div>
+ <p id="vwe" style="display:none;color:#fff;text-align:center">No se encontró la tarjeta. Revisa que esté en la carpeta img/embarque.</p>
+ <img id="vwi" alt="Tarjeta de embarque"><a id="vwa" class="btn big l" target="_blank" rel="noopener" href="#">🔍 ABRIR EN GRANDE</a></div>
+
+<div id="saved">✔ Guardado</div>
+<nav class="bn" id="bn"></nav>
+
+<script>
+const $=i=>document.getElementById(i),esc=s=>String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+/* Almacenamiento en este dispositivo (localStorage). No se sincroniza con otros celulares. */
+const Store={get(k,d){try{const v=JSON.parse(localStorage.getItem('arg_'+k));return v??d}catch(e){return d}},
+ set(k,v){try{localStorage.setItem('arg_'+k,JSON.stringify(v));const s=$('saved');s.classList.add('on');setTimeout(()=>s.classList.remove('on'),900)}catch(e){}}};
+function bind(r){r.querySelectorAll('[data-k]').forEach(e=>{const k=e.dataset.k;e.value=Store.get(k,'');e.oninput=()=>Store.set(k,e.value)})}
+document.addEventListener('error',e=>{if(e.target.tagName=='IMG')e.target.classList.add('broken')},true);
+
+/* Menús */
+const SEC=['inicio','dias','vuelos','alojo','gastos','lugares'];
+const NAV=[['inicio','🏠','Inicio'],['dias','📅','Itinerario'],['vuelos','✈️','Vuelos'],['alojo','🛏️','Alojamiento'],['gastos','💰','Gastos']];
+$('bn').innerHTML=NAV.map(n=>`<a href="#${n[0]}" data-t="${n[0]}"><span>${n[1]}</span>${n[2]}</a>`).join('');
+const MENU=[['dias','📅','NUESTRO ITINERARIO'],['vuelos','✈️','NUESTROS VUELOS'],['alojo','🏠','NUESTRO ALOJAMIENTO'],['gastos','💰','NUESTROS GASTOS'],['lugares','📍','LUGARES QUE VISITAREMOS']];
+$('menu').innerHTML=MENU.map(m=>`<a class="btn mb" href="#${m[0]}"><span class="ic">${m[1]}</span><span class="tx">${m[2]}</span></a>`).join('');
+let lastH='dias';
+function ir(){const h=location.hash.slice(1);let ok;
+ if(h.startsWith('l-')&&L[h.slice(2)]){ok='lugar';showPlace(h.slice(2))}else{ok=SEC.includes(h)?h:'inicio';lastH=ok}
+ document.querySelectorAll('.s').forEach(s=>s.classList.toggle('on',s.id===ok));
+ document.querySelectorAll('nav a').forEach(a=>a.classList.toggle('on',a.dataset.t==ok));scrollTo(0,0)}
+addEventListener('hashchange',ir);
+function bk(){location.hash=lastH;return false}
+
+/* Contador */
+const hd=new Date(),t0=new Date(hd.getFullYear(),hd.getMonth(),hd.getDate()),ini=new Date(2026,10,12),fin=new Date(2026,10,16),dd=Math.round((ini-t0)/864e5);
+$('cd').textContent=t0>fin?'¡Gracias por el viaje!':t0>=ini?'Día '+(t0.getDate()-11)+' del viaje':dd==1?'Falta 1 día':'Faltan '+dd+' días';
+
+/* Lugares (14) */
+const MAP='https://www.google.com/maps/search/?api=1&query=';
+const L={'casa-rosada':['Casa Rosada','Sede del gobierno frente a la Plaza de Mayo, famosa por su color rosado.','Casa Rosada Balcarce 50'],
+'centro-historico':['Centro Histórico','Plaza de Mayo y los edificios históricos del corazón de la ciudad.','Plaza de Mayo'],
+'obelisco':['Obelisco','El gran símbolo de Buenos Aires, sobre la avenida 9 de Julio.','Obelisco'],
+'teatro-colon':['Teatro Colón','Uno de los teatros de ópera más admirados del mundo.','Teatro Colón Cerrito 628'],
+'galerias-pacifico':['Galerías Pacífico','Galería histórica con cúpulas pintadas, en la peatonal Florida.','Galerías Pacífico Florida 753'],
+'caminito':['Caminito (La Boca)','Calle de casas de mil colores, ícono de La Boca y del tango.','Caminito La Boca'],
+'san-telmo':['San Telmo','Calles empedradas, anticuarios y la Plaza Dorrego.','Plaza Dorrego San Telmo'],
+'recoleta':['Recoleta','Barrio elegante con plazas y la gran flor metálica Floralis.','Floralis Genérica'],
+'cementerio':['Cementerio de la Recoleta','Mausoleos y esculturas en uno de los cementerios más famosos.','Cementerio de la Recoleta'],
+'el-ateneo':['Librería El Ateneo','Un antiguo teatro convertido en una librería espectacular.','El Ateneo Grand Splendid'],
+'bellas-artes':['Museo de las Bellas Artes','Museo nacional con arte argentino y europeo.','Museo Nacional de Bellas Artes Buenos Aires'],
+'palermo':['Palermo','Parques y lagos de los Bosques de Palermo, con el Planetario.','Planetario Galileo Galilei Buenos Aires'],
+'rosedal':['Rosedal de Palermo','Jardín de rosas con lago y glorietas, ideal para pasear.','Rosedal de Palermo'],
+'puerto-madero':['Puerto Madero','Antiguo puerto con el Puente de la Mujer, lindo de noche.','Puente de la Mujer Puerto Madero']};
+const POS={'casa-rosada':'62% 50%','obelisco':'50% 35%','caminito':'50% 35%','teatro-colon':'48% 50%','el-ateneo':'50% 55%','rosedal':'50% 55%','cementerio':'45% 50%','puerto-madero':'40% 50%'};
+const img=(id,c='')=>`<img src="img/lugares/${id}.jpg" alt="${esc(L[id][0])}" loading="lazy" decoding="async" style="object-position:${POS[id]||'50% 50%'}" class="${c}">`;
+
+/* Itinerario 12–15. El lunes 16 es día de viaje: no hay actividades. */
+const D=[[12,'Jueves 12','Centro Histórico','#0B2A5B','casa-rosada',['casa-rosada','centro-historico','obelisco','teatro-colon','galerias-pacifico']],
+[13,'Viernes 13','La Boca y San Telmo','#E0662B','caminito',['caminito','san-telmo']],
+[14,'Sábado 14','Recoleta','#C2185B','recoleta',['recoleta','cementerio','el-ateneo','bellas-artes']],
+[15,'Domingo 15','Palermo y Puerto Madero','#2E9E5B','rosedal',['palermo','rosedal','puerto-madero']]];
+let V=Store.get('vis',{});
+const dayHtml=d=>`<div class="dc" style="--dc:${d[3]}"><div class="dh">${img(d[4])}<span class="tag">${d[1]}</span><h3>${d[2]}</h3></div>
+ ${d[0]==12?'<div class="key" style="margin:12px 14px 4px">🔑 Llegar a las 8:30 a. m. al Airbnb para recibir las llaves</div>':''}
+ ${d[5].map(id=>`<a class="row" href="#l-${id}">${img(id)}<span class="nm">${L[id][0]}${id=='puerto-madero'?' 🌙':''}</span><span class="vt" data-vt="${id}"></span></a>`).join('')}
+ <details class="nt"><summary>📝 Notas</summary><textarea data-k="dia${d[0]}" placeholder="Escribe aquí..."></textarea></details></div>`;
+$('listaDias').innerHTML=D.map(dayHtml).join('')+`<div class="dc"><div class="pad"><span class="tag" style="background:#6D4C9F">Lunes 16</span><h3 style="font-size:1.4rem;margin:6px 0">Día de viaje ✈️</h3><div class="key">Hoy viajamos. No hay actividades.</div><a class="btn big l" href="#vuelos">Ver vuelos</a></div></div>`;
+$('lg').innerHTML=D.flatMap(d=>d[5]).map(id=>`<a class="lt" href="#l-${id}">${img(id)}<span class="vt" data-vt="${id}"></span><b>${L[id][0]}</b></a>`).join('');
+function paintV(){document.querySelectorAll('[data-vb]').forEach(b=>{const v=!!V[b.dataset.vb];b.classList.toggle('on',v);b.textContent=v?'✔ VISITADO (tocar para quitar)':'☐ MARCAR COMO VISITADO'});
+ document.querySelectorAll('[data-vt]').forEach(s=>s.textContent=V[s.dataset.vt]?'✔':'')}
+function togV(id){if(V[id])delete V[id];else V[id]=1;Store.set('vis',V);paintV()}
+function showPlace(id){const p=L[id],d=D.find(x=>x[5].includes(id));
+ $('lugar').innerHTML=`<header class="bar"><a class="bk" href="#" onclick="return bk()">⬅ Volver</a><h2>${esc(p[0])}</h2></header><div class="pad2">${img(id,'pbig')}<div class="mt"><span class="tag" style="background:${d[3]}">${d[1]} · ${d[2]}</span></div><p style="margin:10px 0 14px;font-size:1.2rem">${p[1]}</p><a class="btn big" target="_blank" rel="noopener" href="${MAP}${encodeURIComponent(p[2]+', Buenos Aires, Argentina')}">📍 ABRIR UBICACIÓN EN GOOGLE MAPS</a><button class="big vb mt" data-vb="${id}" onclick="togV('${id}')"></button></div>`;paintV()}
+
+/* Vuelos: IDA según las tarjetas de embarque; internos y regreso según el HTML original */
+const PI=['mama','papa','raul','mathias'],PN=[['Mamá','Angélica Jiménez Carrión'],['Papá','Fidel Santiago Rodríguez'],['Raúl','Raúl Jiménez Jatson'],['Mathias','Mathias Santiago Jiménez']],PEND='PENDIENTE DE CONFIRMACIÓN';
+const FL={
+ida:[{f:'Miércoles 11 de noviembre',r:'Lima → Buenos Aires',n:'JA 7800',s:'10:40 p. m.',l:'5:05 a. m. (jueves 12)',de:'Jorge Chávez (Lima)',a:'Aeroparque Jorge Newbery',p:'7:40 p. m.',e:'9:50 p. m.',x:[[0,'LDTUSK','4E'],[1,'LDTUSK','20C'],[2,'L5FNFF','10E'],[3,'LDTUSK','23B']]}],
+int:[{f:'Lunes 16 de noviembre',r:'Buenos Aires → Mendoza',s:'5:00 a. m.',l:'6:55 a. m.',de:'Ezeiza (Ministro Pistarini)',a:'El Plumerillo (Mendoza)',p:'3:00 a. m.',x:[[0,'PYTHNG'],[1,'PYTHNG'],[3,'PYTHNG']]},
+ {f:'Sábado 21 de noviembre',r:'Mendoza → Buenos Aires',s:'11:24 p. m.',l:'1:05 a. m. (domingo 22)',de:'El Plumerillo (Mendoza)',a:'Ezeiza (Ministro Pistarini)',p:'9:24 p. m.',x:[[0,'YFQPWX'],[1,'YFQPWX'],[3,'YFQPWX']]}],
+vta:[{f:'Lunes 16 de noviembre',r:'Buenos Aires → Lima',s:'5:30 a. m.',l:'8:15 a. m.',de:'Aeroparque Jorge Newbery',a:'Jorge Chávez (Lima)',p:'2:30 a. m.',x:[[2,'L5FNFF']]},
+ {f:'Martes 24 de noviembre',r:'Buenos Aires → Lima',s:'5:20 a. m.',l:'8:00 a. m.',de:'Aeroparque Jorge Newbery',a:'Jorge Chávez (Lima)',p:'2:20 a. m.',x:[[0,'LDTUSK'],[1,'LDTUSK'],[3,'LDTUSK']]}]};
+const TT={ida:['IDA','Lima → Buenos Aires'],int:['VUELOS INTERNOS','Buenos Aires ↔ Mendoza'],vta:['REGRESO','Buenos Aires → Lima']};
+const pen=c=>!c||c==PEND;
+const times=f=>{const q=f.l.split(' ('),e=q[1]?q[1].replace(')','')+' · ':'';return `<div class="hr"><div><small>🛫 SALE</small><b>${f.s}</b><span>${f.de}</span></div><div><small>🛬 LLEGA</small><b>${q[0]}</b><span>${e}${f.a}</span></div></div>`};
+const codeBox=c=>pen(c)?`<div class="code pend">${PEND}</div>`:`<div class="code"><small>Código de reserva</small><b>${c}</b></div>`;
+const idaHead=f=>`<div class="card pad"><b style="font-size:1.2rem">${f.r}</b><div>📅 ${f.f}</div><div>✈️ Vuelo <b>${f.n}</b> · Aerolínea <b>JetSMART</b></div>${times(f)}<div>🧳 Estar en el aeropuerto a las <b>${f.p}</b></div><div>🚪 Embarque a las <b>${f.e}</b></div></div>`;
+const idaCard=x=>{const k=x[0],src=`img/embarque/${PI[k]}.png`;return `<div class="card pad"><div class="pas" style="border:0;padding-top:0"><img src="img/familia/${PI[k]}.jpg" alt=""><div><b style="font-size:1.3rem">${PN[k][0]}</b><small>${PN[k][1]}</small></div></div>${codeBox(x[1])}<div class="mt"><b>💺 Asiento ${x[2]}</b></div><button class="big mt" onclick="openVw('${src}','${PN[k][0]}')">🎫 VER TARJETA DE EMBARQUE</button></div>`};
+const flCard=f=>`<div class="card pad"><b style="font-size:1.2rem">${f.r}</b><div>📅 ${f.f}</div>${times(f)}<div>🏢 Aerolínea: <b>JetSMART</b></div><div>🧳 Estar en el aeropuerto a las <b>${f.p}</b></div><div class="sec" style="margin:12px 0 2px">Pasajeros</div>${f.x.map(x=>`<div class="pas"><img src="img/familia/${PI[x[0]]}.jpg" alt=""><div><b>${PN[x[0]][0]}</b><small>${PN[x[0]][1]}</small></div>${pen(x[1])?`<span class="cod p">${PEND}</span>`:`<span class="cod">${x[1]}</span>`}</div>`).join('')}</div>`;
+let tab='ida';
+function vue(){$('seg').innerHTML=Object.keys(TT).map(k=>`<button class="${k==tab?'on':''}" onclick="tab='${k}';vue()">${TT[k][0]}</button>`).join('');
+ const t=TT[tab];$('listaV').innerHTML=`<h3 class="sec">${t[0]} · ${t[1]}</h3>`+(tab=='ida'?FL.ida.map(f=>idaHead(f)+'<div class="sec">Tarjetas de embarque</div>'+f.x.map(idaCard).join('')).join(''):FL[tab].map(flCard).join(''))}
+/* Visor de tarjeta de embarque */
+function openVw(src,name){const i=$('vwi');i.classList.remove('broken');$('vwe').style.display='none';i.onerror=()=>{$('vwe').style.display='block'};i.src=src;$('vwa').href=src;$('vwt').textContent='🎫 '+name;$('vw').classList.add('on');history.pushState({vw:1},'')}
+function closeVw(){if($('vw').classList.contains('on'))history.back()}
+addEventListener('popstate',()=>$('vw').classList.remove('on'));
+addEventListener('keydown',e=>{if(e.key=='Escape')closeVw()});
+
+/* Gastos: todo el viaje */
+const CATS=['🍽️ Comida','🚕 Transporte','🎟️ Paseos','🛍️ Compras','🏠 Alojamiento','✈️ Vuelos','📦 Otros'];
+$('cat').innerHTML=CATS.map(c=>`<option>${c}</option>`).join('');
+const MN={'S/':'Soles (S/)','US$':'Dólares (US$)','$ argentinos':'Pesos argentinos'};
+const ld=ts=>new Date(ts-new Date(ts).getTimezoneOffset()*6e4).toISOString().slice(0,10);
+let G=Store.get('gastos',[]).map(g=>({...g,d:g.d||ld(g.id)})),ed=null,del=null;
+function save(){Store.set('gastos',G);pinta()}
+function pinta(){const t={};G.forEach(g=>t[g.m]=(t[g.m]||0)+g.a);
+ const ks=['S/','US$','$ argentinos'].concat(Object.keys(t).filter(k=>!MN[k]));
+ $('totales').innerHTML=ks.map(k=>`<div class="tot"><small>${esc(MN[k]||k)}</small><div class="n">${esc(k)} ${(t[k]||0).toFixed(2)}</div></div>`).join('');
+ $('histG').innerHTML=G.length?G.slice().sort((a,b)=>b.d.localeCompare(a.d)||b.id-a.id).map(g=>`<div class="gi"><span><b>${esc(g.m)} ${g.a.toFixed(2)}</b><br><small>${+g.d.slice(8)}/${+g.d.slice(5,7)} · ${esc(g.t||'')} ${esc(g.n||g.c||'')}</small></span><span class="a">${del==g.id?`<button class="si" onclick="delOk(${g.id})">Sí, borrar</button><button onclick="del=null;pinta()">No</button>`:`<button aria-label="Editar" onclick="editG(${g.id})">✏️</button><button class="x" aria-label="Borrar" onclick="del=${g.id};pinta()">🗑</button>`}</span></div>`).join(''):'<p class="mini">Todavía no hay gastos.</p>';
+}
+function addG(){const a=parseFloat($('monto').value);if(!(a>0)){$('err').textContent='Escribe el importe.';return}
+ $('err').textContent='';const n=$('nota').value.trim(),t=$('cat').value,m=$('mon').value;
+ if(ed){const g=G.find(x=>x.id==ed);Object.assign(g,{n,a,m,t})}else G.push({id:Date.now(),n,a,m,t,d:ld(Date.now())});
+ cancelE();save()}
+function editG(id){const g=G.find(x=>x.id==id);ed=id;$('nota').value=g.n||g.c||'';$('monto').value=g.a;$('mon').value=g.m;if(g.t)$('cat').value=g.t;$('ft').textContent='Editar gasto';$('bg').textContent='💾 GUARDAR CAMBIOS';$('bc').style.display='flex';$('ft').scrollIntoView({block:'center'})}
+function cancelE(){ed=null;$('nota').value='';$('monto').value='';$('err').textContent='';$('ft').textContent='Anotar un gasto nuevo';$('bg').textContent='➕ GUARDAR';$('bc').style.display='none'}
+function delOk(id){G=G.filter(g=>g.id!=id);del=null;save()}
+function addAir(){const s=parseFloat($('cS').value),u=parseFloat($('cU').value);let n=0;
+ [[s,'S/','airbnb-s'],[u,'US$','airbnb-u']].forEach((x,i)=>{if(x[0]>0&&!G.some(g=>g.k==x[2])){G.push({id:Date.now()+i,n:'Airbnb Buenos Aires',t:'🏠 Alojamiento',a:x[0],m:x[1],d:ld(Date.now()),k:x[2]});n++}});
+ if(!n){$('airMsg').innerHTML='<div class="err">Escribe el costo, o ya está incluido en los gastos.</div>';return}
+ $('airMsg').innerHTML='';save();location.hash='gastos'}
+[['cS','838.40'],['cU','']].forEach(x=>{const e=$(x[0]);e.value=Store.get('cAl'+x[0],x[1]);e.oninput=()=>Store.set('cAl'+x[0],e.value)});
+
+pinta();paintV();vue();bind(document);ir();
+</script></body></html>
